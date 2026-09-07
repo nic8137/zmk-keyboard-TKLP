@@ -5,14 +5,16 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &zip_temp_layer {
-    layer = <5>;        // ← Z のマウスレイヤー番号
-    timeout-ms = <300>; // ← 動きが止まってから解除されるまでの時間
+    layer = <5>;
+    timeout-ms = <300>;
 };
 
 &pointing_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+        &zip_temp_layer
+    >;
 };
-
 
 &size_s_transform {
     col-offset = <7>;
@@ -24,23 +26,4 @@
 
 &size_l_transform {
     col-offset = <7>;
-};
-
-/* ========================================================================== */
-/* 1. インプットプロセッサ（オートマウスの挙動）の定義
-/* ========================================================================== */
-/ {
-    /* 
-     * ここで「マウスレイヤーのインデックス（番号）」と
-     * 「操作を止めてから元のレイヤーに戻るまでの時間（ミリ秒）」を指定します
-     */
-    input_processors {
-        aml_processor: aml_processor {
-            compatible = "zmk,input-processor-auto-mouse-layer";
-            #input-processor-cells = <0>;
-            
-            layer = <5>;          /* 【重要】切り替えたいマウス用レイヤーの番号（0から数える） */
-            timeout-ms = <1000>;  /* トラボを止めてから1秒後に自動で元のレイヤーに戻る */
-        };
-    };
 };
