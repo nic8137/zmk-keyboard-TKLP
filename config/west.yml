@@ -29,8 +29,5 @@ manifest:
       revision: main
     - name: zmk-driver-kscan-4-direction-switch
       remote: sekigon-gonnoc
-    - name: zmk-input-transform
-      url: https://github.com/zmkfirmware/zmk-input-transform
-      revision: main
   self:
     path: config
