@@ -65,22 +65,4 @@
             >;
         };
     };
-
-    /* ====================================================================== */
-    /* torabo-tsuki LP 用 トラックボール速度・スクロール設定 */
-    /* ====================================================================== */
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>; // torabo-tsuki LPのデバイス名
-
-        // 1. 通常時（カーソルの移動速度）
-        // 例: <2 1> で2倍速、<1 2> で0.5倍速。好みの速度に数値を調整してください。
-        input-processors = <&zip_xy_scaler 2 1>; 
-
-        // 2. スクロールレイヤー（layer_1）でのスクロール速度調整
-        scroller {
-            layers = <1>; // layer_1を指定
-            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_wheel_scaler 1 3>; // 例：1/3倍（遅く）にする
-        };
-    };
 };
