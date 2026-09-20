@@ -23,10 +23,11 @@
         device = &pointing_device@0;   // ★ここが正しい参照名
         input-processors = <&zip_xy_scaler 2 1>;
     };
-
+    /*
     /* スクロールレイヤー設定 */
     scroller {
         layers = <1>;
         input-processors = <&zip_xy_to_scroll_mapper &zip_wheel_scaler 1 3>;
     };
+    */
 };
