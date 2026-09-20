@@ -32,6 +32,13 @@
 &kp TAB           &kp A   &kp S         &kp D         &kp F   &kp G            &mkp LCLK    &mt MINUS COMMA        &kp H       &kp J   &kp K            &kp L          &kp SEMI   &kp SQT
 &kp LSHFT         &kp Z   &kp X         &kp C         &kp V   &kp B            &mkp RCLK    &mt LEFT_BRACE PERIOD  &kp N       &kp M   &kp RIGHT_BRACE  &kp BACKSLASH  &trans     &trans
 &kp LEFT_CONTROL  &trans  &kp LEFT_ALT  &kp LEFT_GUI  &trans  &lt 2 BACKSPACE  &lt 1 SPACE  &kp ENTER              &kp DELETE  &trans  &trans           &kp SLASH      &kp UNDER  &kp RIGHT_SHIFT
+        // ★ ここが row5（4方向スイッチ）
+        &kp UP
+        &kp DOWN
+        &kp LEFT
+        &kp RIGHT
+        &kp ENTER
+        
             >;
         };
 
