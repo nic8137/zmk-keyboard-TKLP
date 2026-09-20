@@ -15,7 +15,7 @@
         power-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
     };
 };
-
+/*
 / {
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
@@ -28,4 +28,5 @@
         input-processors = <&zip_xy_to_scroll_mapper &zip_wheel_scaler 1 3>;
     };
 };
+*/
 
