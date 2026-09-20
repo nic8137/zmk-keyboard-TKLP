@@ -20,7 +20,7 @@
     /* トラックボール速度設定 */
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        device = &pointing_device@0;   // ★ここが正しい参照名
+        device = &pointing_device;  // ★ここが正しい参照名
         input-processors = <&zip_xy_scaler 2 1>;
     };
     /*
