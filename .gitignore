@@ -1,0 +1,6 @@
+zephyr/
+zmk/
+modules/
+zmk-driver-*/
+zmk-feature-*/
+zmk-component-*/
