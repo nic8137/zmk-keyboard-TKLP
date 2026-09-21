@@ -1,3 +1,4 @@
+
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -14,21 +15,5 @@
         irq-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
         power-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H0H1)>;
 
-        //cpi = <800>;   // ★ スクロール速度が遅くなる
     };
 };
-/*
-/ {
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        device = &pointing_device;        // ★ここが正しい
-        input-processors = <&zip_xy_scaler 2 1>;   // 2倍速
-    };
-
-    scroller {
-        layers = <1>;
-        input-processors = <&zip_xy_to_scroll_mapper &zip_wheel_scaler 1 3>;
-    };
-};
-*/
-
