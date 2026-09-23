@@ -5,6 +5,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+
+    #define JP_YEN          0x89
+    #define JP_PIPE         LS(0x89)
+    #define JP_UNDERSCORE   LS(0x87)
+    
     combos {
         compatible = "zmk,combos";
 
