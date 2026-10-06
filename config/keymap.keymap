@@ -22,22 +22,22 @@
         };
 
         LeftArrow {
-            bindings = <&none>;
+            bindings = <&kp LEFT_ARROW>;
             key-positions = <33 34>;
         };
 
         RightArrow {
-            bindings = <&none>;
+            bindings = <&kp RIGHT_ARROW>;
             key-positions = <34 35>;
         };
 
         UpperArrow {
-            bindings = <&none>;
+            bindings = <&kp UP_ARROW>;
             key-positions = <34 20>;
         };
 
         DownArrow {
-            bindings = <&none>;
+            bindings = <&kp DOWN_ARROW>;
             key-positions = <34 48>;
         };
     };
